@@ -1,0 +1,211 @@
+:root {
+    --primary-color: #3498db; /* Blue */
+    --secondary-color: #e74c3c; /* Red */
+    --light-color: #ecf0f1; /* Light gray */
+    --dark-color: #2c3e50; /* Dark blue */
+    --transition-duration: 0.3s;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer sticks to bottom */
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allow main content to take up available space */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+#home-page h2, #categories-page h2, #results-page h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--transition-duration);
+    margin: 0 10px; /* Add some space between buttons */
+}
+
+button:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+#quiz-page .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#question-count, #timer {
+    font-size: 1.2em;
+    color: var(--dark-color);
+}
+
+#question-text {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.answer-btn {
+    background-color: white;
+    color: var(--dark-color);
+    border: 1px solid var(--primary-color);
+    padding: 15px;  /* Increased padding */
+    text-align: left; /* Align text to the left */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+.answer-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.answer-btn.correct {
+    background-color: #27ae60; /* Green */
+    color: white;
+}
+
+.answer-btn.incorrect {
+    background-color: #c0392b; /* Darker red */
+    color: white;
+}
+
+#next-btn, #submit-btn {
+    margin-top: 20px;
+    align-self: center; /* Center the button horizontally */
+}
+
+#results-page {
+    text-align: center;
+}
+
+#score-display {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+#review-section li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.result-text{
+    font-weight: bold;
+}
+
+.correct{
+    color: green;
+}
+.incorrect{
+    color: red;
+}
+#leaderboard-preview {
+    margin-top: 20px; /* Space from other home page elements */
+    border: 1px solid #ddd; /* Light border */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#leaderboard-list {
+    list-style: none;
+    padding: 0;
+}
+
+#leaderboard-list li {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px; /* Space above the footer */
+}
+
+/* Animations */
+button {
+    animation: fadeInUp var(--transition-duration) ease-in-out;
+}
+
+.answer-btn {
+    animation: pulse var(--transition-duration) ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design - Adjust as needed */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}

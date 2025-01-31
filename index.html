@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Time</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quiz Time</h1>
+        </header>
+        <main>
+            <section id="home-page">
+                <h2>Welcome!</h2>
+                <p>Test your knowledge with fun quizzes.</p>
+                <button id="start-quiz-btn">Start Quiz</button>
+                 <button id="categories-btn">Quiz Categories</button>
+                 <div id="leaderboard-preview">
+                 <h3>Top Scores</h3>
+                  <ul id="leaderboard-list">
+                    </ul>
+                </div>
+            </section>
+            <section id="quiz-page" style="display: none;">
+                <div class="quiz-header">
+                    <div id="question-count">Question 1/10</div>
+                     <div id="timer"></div>
+                </div>
+                <h3 id="question-text"></h3>
+                <div id="answer-buttons" class="grid-container">
+                   
+                </div>
+                <button id="next-btn" style="display: none;">Next</button>
+                 <button id="submit-btn" style="display: none;">Submit</button>
+            </section>
+            <section id="results-page" style="display: none;">
+                 <h2>Results</h2>
+                <p id="score-display"></p>
+                  <div id="review-section">
+                   
+                    </div>
+                 <button id="restart-btn">Restart Quiz</button>
+                <button id="share-btn">Share</button>
+            </section>
+            <section id="categories-page" style="display: none;">
+                <h2>Quiz Categories</h2>
+                  <ul id="categories-list">
+                    
+                   </ul>
+                  <button id="back-btn">Go Back</button>
+            </section>
+        </main>
+        <footer>
+            <p>© 2024 Quiz App</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
